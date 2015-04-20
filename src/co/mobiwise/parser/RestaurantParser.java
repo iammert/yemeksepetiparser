@@ -74,11 +74,13 @@ public class RestaurantParser implements IRestaurantParser{
 					menuItem.setMenuItemName(e.getElementsByClass(ParserConstants.MENU_ITEM_NAME_CLASS).select(ParserConstants.MENU_ITEM_NAME_CLASS_2).text().toString());
 					menuItem.setMenuItemInfo(e.getElementsByClass(ParserConstants.MENU_ITEM_INFO_CLASS).select("p").text().toString());
 					menuItem.setMenuItemPrice(e.getElementsByClass(ParserConstants.MENU_ITEM_PRICE_CLASS).text().toString());
-					restaurantMenuItemList.add(menuItem);
+					if(!menuItem.getMenuItemName().equals(""))
+						restaurantMenuItemList.add(menuItem);
 				}
-				
 				tempMenu.setMenuItemList(restaurantMenuItemList);
-				restaurantMenuList.add(tempMenu);
+
+				if(tempMenu.getMenuItemList().size()>0)
+					restaurantMenuList.add(tempMenu);
 			}
 			
 			restaurant.setMenuList(restaurantMenuList);
