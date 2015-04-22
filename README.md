@@ -2,8 +2,8 @@
 
 #Features
 
-*Fetch restaurant menus and menu products.
-*Fetch user comments about restaurant.
+ - Fetch restaurant menus and menu products.
+ - Fetch user comments about restaurant.
 
 #Usage
 ```java
