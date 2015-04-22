@@ -1,11 +1,13 @@
 package co.mobiwise.main;
 
-import com.owlike.genson.Genson;
+import java.util.List;
 
-import co.mobiwise.model.Restaurant;
+import co.mobiwise.model.Comment;
 import co.mobiwise.parser.IRestaurantParser;
 import co.mobiwise.parser.ParserConstants;
 import co.mobiwise.parser.RestaurantParser;
+
+import com.owlike.genson.Genson;
 
 public class Test {
 
@@ -13,7 +15,7 @@ public class Test {
 
 		IRestaurantParser parser = new RestaurantParser();
 
-		Restaurant restaurant = parser.getRestaurant(ParserConstants.TEST_RESTAURANT_NAME);
+		List<Comment> restaurant = parser.getRestaurant(ParserConstants.TEST_RESTAURANT_NAME).getCommentList();
 		
 		Genson genson = new Genson();
 		String restaurantJson = genson.serialize(restaurant);

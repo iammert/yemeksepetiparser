@@ -14,6 +14,8 @@ public class Restaurant {
 	
 	double restaurantFlavorPoint;
 	
+	List<Comment> commentList;
+	
 	List<Menu> menuList;
 	
 	public Restaurant() {
@@ -58,6 +60,22 @@ public class Restaurant {
 
 	public void setMenuList(List<Menu> menuList) {
 		this.menuList = menuList;
+	}
+
+	public String getRestaurantHref() {
+		return restaurantHref;
+	}
+
+	public void setRestaurantHref(String restaurantHref) {
+		this.restaurantHref = restaurantHref;
+	}
+
+	public List<Comment> getCommentList() {
+		return commentList;
+	}
+
+	public void setCommentList(List<Comment> commentList) {
+		this.commentList = commentList;
 	}
 	
 }
